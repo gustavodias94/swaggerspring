@@ -25,7 +25,7 @@ public class Pessoa implements Serializable{
     @Column(name = "NO_PESSOA")
     private String nomePessoa;
 
-    @Column(name = "NR_CPF")
+    @Column(name = "NR_CPF",unique = true)
     private String cpfPessoa;
 
     @Column(name = "NR_TELEFONE")

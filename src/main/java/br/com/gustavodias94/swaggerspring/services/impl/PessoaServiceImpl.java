@@ -38,6 +38,6 @@ public class PessoaServiceImpl implements PessoaService{
 
 /*
 
-Dentro da PessoaRepository, estamos extendendo o CrudRepository que alguns métodos que o Spring já nos disponibiliza.
-Note que não existe na classe PessoaRespository os métodos findAll() e sava(), eles são providos pelo CrudRepository.
+Dentro da PessoaRepository, estamos extendendo o CrudRepository que contém alguns métodos que o Spring já nos disponibiliza.
+Note que não existe na classe PessoaRespository os métodos findAll() e save(), eles são providos pela interface CrudRepository do SpringData.
 */
