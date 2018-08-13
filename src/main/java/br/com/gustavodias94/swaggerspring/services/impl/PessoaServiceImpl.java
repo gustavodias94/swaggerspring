@@ -20,19 +20,36 @@ public class PessoaServiceImpl implements PessoaService{
         this.pessoaRepository = pessoaRepository;
     }
 
-    //Esse é o metodo que a Controller chama para listar todas as pessoas.
+    //Esse é o metodo que a controller chama para listar todas as pessoas.
     @Override
     public List<Pessoa> buscarTodasPessoas() {
         return (List<Pessoa>) pessoaRepository.findAll();
     }
 
 
-    // Esse é o metodo que a Controller chama para cadastrar uma pessoa.
+    // Esse é o metodo que a controller chama para cadastrar uma pessoa no banco de dados.
     @Override
     @Transactional
     public Pessoa cadastrarPessoa(Pessoa pessoa) {
         return pessoaRepository.save(pessoa);
     }
+
+
+    // Esse é o metodo que a controller chama para deletar uma pessoa do banco de dados.
+    @Override
+    @Transactional
+    public void deletarPessoa(Long id) {
+        pessoaRepository.deleteById(id);
+    }
+
+    // Esse é o metodo que a controller chama para atualizar uma pessoa do banco de dados.
+    @Override
+    @Transactional
+    public Pessoa atualizarPessoa(Pessoa pessoa) {
+        return pessoaRepository.save(pessoa);
+    }
+
+
 }
 
 

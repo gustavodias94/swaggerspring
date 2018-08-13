@@ -9,4 +9,8 @@ public interface PessoaService {
     List<Pessoa> buscarTodasPessoas();
 
     Pessoa cadastrarPessoa(Pessoa pessoa);
+
+    void deletarPessoa(Long id);
+
+    Pessoa atualizarPessoa(Pessoa pessoa);
 }
