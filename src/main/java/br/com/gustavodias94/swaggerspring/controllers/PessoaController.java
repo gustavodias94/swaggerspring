@@ -66,7 +66,6 @@ public class PessoaController {
     @ApiOperation(value = "Endpoint para apagar uma pessoa", notes = "Endpoint para apagar uma pessoa")
     public ResponseEntity<Pessoa> deletarPessoa(@PathVariable Long id){
         HttpStatus httpStatus = HttpStatus.OK;
-        Pessoa pessoa = null;
         try {
             pessoaService.deletarPessoa(id);
         } catch (Exception e) {
